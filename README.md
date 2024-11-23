@@ -1,6 +1,4 @@
-# 
-
-# SentiGPT: Analyzing User Sentiment in Decentraland using Large Language Models
+# Leveraging Large Language Models for Sentiment Analysis: Multi-Modal Analysis of Decentraland's MANA Token
 
 ## *Supplementary resources, data, and code*
 by **Xintong Wu**, **Peiting Tsai**, **Nicholas Yuan** , **Michael Yu**, **Greg Sun** and **Luyao Zhang***
@@ -10,25 +8,28 @@ by **Xintong Wu**, **Peiting Tsai**, **Nicholas Yuan** , **Michael Yu**, **Greg 
 
 *Figure 1. Flowchart for sentiment analysis using LLM.*
 
-## Table of Contents
-- [Data](https://github.com/Xintong1122/Decentraland_LLM/tree/main#data)
-- [Code]()
-- [Images]()
-- [Reference]()
+## Abstract
+Decentraland is a leading decentralized virtual reality platform where users interact, create, and trade using its native token, MANA. The study investigates integrating community sentiment analysis with multi-modal data, including traditional financial indicators, to improve cryptocurrency prediction models. We address two main research questions: What are the overall sentiment trends and patterns of Decentraland community users on Discord? How does multi-modal data, incorporating sentiment and technical indicators, contribute to predicting token returns? We utilized a BERT-based large language model (LLM) from Hugging Face for sentiment analysis of user discussions in the Decentraland community on Discord. We developed two Long Short-Term Memory (LSTM) models, one using only historical price data and another incorporating multi-modal data, including sentiment scores, trading volume, market capitalization, and other relevant indicators. Our findings indicate that community sentiment within Decentraland is predominantly neutral with a positive tendency. The model incorporated multi-modal data, including sentiment analysis, and demonstrated improved prediction accuracy compared to the model that used only historical prices. This study substantially contributes to the field by demonstrating the transformative potential of multi-modal data integration in financial forecasting. Providing a more comprehensive and accurate prediction model sets a new benchmark for future research at the intersection of cryptocurrency, sentiment analysis, and the Metaverse, paving the way for more informed investment strategies and market analyses.
 
 ## Data
 
 ### Collected Data
 
-For collecting data from Discord, please refer to [**DiscordChatExporter**](https://github.com/Tyrrrz/DiscordChatExporter). DiscordChatExporter is an application that can be used to export message history from any Discord channel to a file.
-
-#### Meta Data Infomation
-
-| Data Files  | Data Type | Data Content |
-| ------------- | ------------- | ------------- |
-| [Discord_message.csv](https://github.com/Xintong1122/Decentraland_LLM/blob/main/Data/Discord_message.csv)  | Queried  | original Discord User Messages |
+To collect data from Discord, please refer to [**DiscordChatExporter**](https://github.com/Tyrrrz/DiscordChatExporter). DiscordChatExporter is an application that can be used to export message history from any Discord channel to a file.
 
 #### Data Dictionary
+
+- **MANA_token_price**
+| **Variable Name** | **Unit**    | **Data Type** | **Description**                                              |
+|--------------------|-------------|---------------|--------------------------------------------------------------|
+| Date          | DAays           | int64          | The trading date.                                            |
+| Open          | USD         | Float         | Opening price of the asset on the trading day.              |
+| High          | USD         | Float         | Highest price of the asset on the trading day.              |
+| Low           | USD         | Float         | Lowest price of the asset on the trading day.               |
+| Close         | USD         | Float         | Closing price of the asset on the trading day.              |
+| Volume        | Tokens      | Integer       | Total number of tokens traded during the trading day.       |
+| Market Cap    | USD         | Float         | Total market capitalization of the asset on the trading day. |
+
 
 - **Discord_message**
 
@@ -45,15 +46,13 @@ For collecting data from Discord, please refer to [**DiscordChatExporter**](http
 
 ### Processed Data
 
-#### Meta Data Infomation
-
-| Data Files  | Data Type | Data Content |
-| ------------- | ------------- | ------------- |
-| [message_cleaned.csv](https://github.com/Xintong1122/Decentraland_LLM/blob/main/Data/message_cleaned.csv)  | Processed | cleaned Discord User Message |
-| [message_with_sentiment.csv](https://github.com/Xintong1122/Decentraland_LLM/blob/main/Data/message_with_sentiment.csv)  | Processed | Discord User Message with sentiment label and sentiment score |
-| [daily_sentiment_scores.csv](https://github.com/Xintong1122/Decentraland_LLM/blob/main/Data/daily_sentiment_scores.csv)  | Processed | Discord User Message with daily sentiment label and sentiment score  |
-
 #### Data Dictionary
+
+- **MANA_typical_price**
+| **Variable Name** | **Unit**    | **Data Type** | **Description**                                             |
+|--------------------|-------------|---------------|------------------------------------------------------------|
+| Date          | Days          | int64          | The trading date.                                            |
+| Typical Price | USD           | Float          | Typical price of the asset on the trading day.               |
 
 - **message_cleaned**
 
@@ -98,11 +97,14 @@ For collecting data from Discord, please refer to [**DiscordChatExporter**](http
 |LLM3_Sentiment_Score | Count | float | Sentiment scores derived from respective LLM analyses|
 |LLM3_Label	| Text | int64 | Sentiment labels derived from respective LLM analyses|
 
+#### Notes:
+- All timestamps are in UTC.
+- Sentiment scores are derived using a fine-tuned RoBERTa model from Hugging Face.
 
 ## Code
 
-| **Code Type** | **Google Colab File Name**|
+| **File Name** | **Description**|
 | ------- | ------- |
-| Process | [Processing_data.ipynb](https://github.com/Xintong1122/Decentraland_LLM/blob/main/Code/Processing_data.ipynb) |
-| Analysis | [Analyzing_data.ipynb](https://github.com/Xintong1122/Decentraland_LLM/blob/main/Code/Analyzing_data.ipynb) |
+|Price_Prediction | Sentiment Analysis of Discord Decentraland user message and MANA price prediction |
+
 
