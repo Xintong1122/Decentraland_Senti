@@ -20,6 +20,7 @@ To collect data from Discord, please refer to [**DiscordChatExporter**](https://
 #### Data Dictionary
 
 - **MANA_token_price**
+
 | **Variable Name** | **Unit**    | **Data Type** | **Description**                                              |
 |--------------------|-------------|---------------|--------------------------------------------------------------|
 | Date          | DAays           | int64          | The trading date.                                            |
@@ -49,6 +50,7 @@ To collect data from Discord, please refer to [**DiscordChatExporter**](https://
 #### Data Dictionary
 
 - **MANA_typical_price**
+
 | **Variable Name** | **Unit**    | **Data Type** | **Description**                                             |
 |--------------------|-------------|---------------|------------------------------------------------------------|
 | Date          | Days          | int64          | The trading date.                                            |
