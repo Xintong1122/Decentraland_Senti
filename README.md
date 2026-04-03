@@ -92,6 +92,7 @@ Decentraland_Senti/
 │   ├── sa1.png                    # Sentiment analysis visualization
 │   ├── sa11.png                   # Sentiment analysis visualization
 │   └── sa2.png                    # Sentiment analysis visualization
+|   └── new.png                    # Sentiment analysis and price prediction visualization (combined)
 └── README.md                      # This file
 ```
 
