@@ -184,6 +184,7 @@ The `sportlight/` directory contains key visualizations from the research:
 - **n0.png, n1.png** - Neutral sentiment analysis visualizations
 - **pp1.png** - Price prediction model results
 - **sa1.png, sa11.png, sa2.png** - Sentiment analysis visualizations
+- **new.png** - Sentiment analysis and price prediction model results(combined)
 
 ## Citation
 
