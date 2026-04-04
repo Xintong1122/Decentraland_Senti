@@ -75,7 +75,7 @@ We utilize a fine-tuned RoBERTa-based large language model (LLM) from Hugging Fa
 ```
 Decentraland_Senti/
 ├── Code/
-│   └── Senti_analysis.ipynb      # Jupyter notebook for sentiment analysis using LLM
+│   └── Sentiment_analysis.ipynb      # Jupyter notebook for sentiment analysis using LLM
 │   └── Price_prediction.ipynb    # Jupyter notebook for LSTM price prediction models
 ├── Data/                          # Dataset files (CSV format)
 │   ├── Decentraland_general.csv   # General Decentraland community data
@@ -180,7 +180,7 @@ The `Code/` directory contains:
   - Model evaluation and comparison
   - Token-return
   - Visualization of results
-- **Sentiment analysis.ipynb** - Jupyter notebook implementing:
+- **Sentiment_analysis.ipynb** - Jupyter notebook implementing:
   - Data preprocessing and feature engineering
   - Sentiment score and sentiment label
   - Visualization of results
