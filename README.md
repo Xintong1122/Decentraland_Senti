@@ -104,6 +104,8 @@ To collect data from Discord, we use [DiscordChatExporter](https://github.com/Ty
 
 #### Data Dictionary: MANA_price.csv
 
+Historical OHLCV data for MANA (ERC-20 utility token) spanning June 15, 2023 – June 14, 2024 (366 days) obtained from [CoinMarketCap](https://coinmarketcap.com/).
+
 | Variable Name | Unit | Data Type | Description |
 |---------------|------|-----------|-------------|
 | Date | Days | datetime | The trading date (YYYY-MM-DD) |
@@ -113,7 +115,6 @@ To collect data from Discord, we use [DiscordChatExporter](https://github.com/Ty
 | Close | USD | float | Closing price of the asset |
 | Volume | Tokens | int | Total number of tokens traded |
 | Market_Cap | USD | float | Total market capitalization |
-
 #### Data Dictionary: Discord Messages (Raw)
 
 | Variable Name | Unit | Data Type | Description |
@@ -212,3 +213,4 @@ This project is licensed under the MIT License.
 - The Decentraland community for providing open access to Discord discussions
 - [Hugging Face](https://huggingface.co/) for the [transformers](https://github.com/huggingface/transformers) library and pre-trained RoBERTa models
 - [DiscordChatExporter](https://github.com/Tyrrrz/DiscordChatExporter) by Tyrrrz for data collection tools
+- Historical MANA price data is available via [CoinMarketCap](https://coinmarketcap.com/), [CoinGecko API](https://www.coingecko.com/en/api), or Yahoo Finance.
