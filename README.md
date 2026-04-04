@@ -75,7 +75,8 @@ We utilize a fine-tuned RoBERTa-based large language model (LLM) from Hugging Fa
 ```
 Decentraland_Senti/
 ├── Code/
-│   └── Price_Prediction.ipynb    # Jupyter notebook for LSTM price prediction models
+│   └── Senti_analysis.ipynb      # Jupyter notebook for sentiment analysis using LLM
+│   └── Price_prediction.ipynb    # Jupyter notebook for LSTM price prediction models
 ├── Data/                          # Dataset files (CSV format)
 │   ├── Decentraland_general.csv   # General Decentraland community data
 │   ├── MANA_price.csv             # MANA token historical OHLCV price data
@@ -172,11 +173,16 @@ Historical MANA price data is available via [CoinGecko API](https://www.coingeck
 
 The `Code/` directory contains:
 
-- **Price_Prediction.ipynb** - Jupyter notebook implementing:
+- **Price_prediction.ipynb** - Jupyter notebook implementing:
   - Data preprocessing and feature engineering
   - Baseline LSTM model (price-only)
   - Multi-modal LSTM model (price + sentiment)
   - Model evaluation and comparison
+  - Token-return
+  - Visualization of results
+- **Sentiment analysis.ipynb** - Jupyter notebook implementing:
+  - Data preprocessing and feature engineering
+  - Sentiment score and sentiment label
   - Visualization of results
 
 ## Spotlight Visualizations
